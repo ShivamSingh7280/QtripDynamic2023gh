@@ -112,6 +112,7 @@ footer {
 .activity-card {
   color: #000;
   position: relative;
+  z-index:1;
   height: 350px;
   /* width: calc(25% - 20px); */
   /* padding: 6px; */
@@ -119,7 +120,7 @@ footer {
   border-radius: 8px;
   cursor: pointer;
   -webkit-transition: 0.2s all;
-  overflow: hidden;
+  overflow: visible;
 
   display: flex;
   flex-direction: column;
@@ -132,6 +133,7 @@ footer {
   /* border-radius: 8px; */
   -webkit-transition: 0.2s all;
   /* -webkit-filter: brightness(70%); */
+  overflow:hidden;
 }
 .activity-card img:hover {
   -webkit-filter: brightness(50%);
@@ -190,10 +192,11 @@ footer {
   color: #fff;
   background: rgb(255, 145, 0);
   top: 0;
-  right: 0;
-  z-index: 1;
+  right: -10px;
+  
+  z-index: 2;
   margin-top: 16px;
-  margin-right: 8px;
+  margin-right: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,6 +217,17 @@ footer {
   justify-content: center;
   cursor: pointer;
 }
+
+
+.adventureDuration h5{
+  margin-bottom: 0%;
+}
+
+.adventureDuration p{
+  margin-bottom: 0%;
+}
+
+
 .reserve-button:hover {
   background-color: rgb(226, 129, 1);
 }
