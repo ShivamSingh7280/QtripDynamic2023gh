@@ -1,28 +1,70 @@
 import config from "../conf/index.js";
 
+
 //Implementation to extract adventure ID from query params
 function getAdventureIdFromURL(search) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Get the Adventure Id from the URL
 
+  let advId = new URLSearchParams(search);
+  return advId.get("adventure");
 
-  // Place holder for functionality to work in the Stubs
-  return null;
+// Place holder for functionality to work in the Stubs
 }
+
+
+
 //Implementation of fetch call with a paramterized input based on adventure ID
+
 async function fetchAdventureDetails(adventureId) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Fetch the details of the adventure by making an API call
-
-
+  try{
+    let response = await fetch (config.backendEndpoint + `/adventures/detail?adventure=${adventureId}`);
+    let data = await response.json();
+    return data;
+  }catch(e){
+    return null;
+  }
   // Place holder for functionality to work in the Stubs
-  return null;
 }
+
+
 
 //Implementation of DOM manipulation to add adventure details to DOM
 function addAdventureDetailsToDOM(adventure) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Add the details of the adventure to the HTML DOM
+  // document.getElementById("adventure-name").innerHTML = adventure.name; 
+  // document.getElementById("adventure-subtitle").innerHTML = adventure.subtitle;
+  // let imagesCollection = adventure.images.map(imgUrl => `<img src=${imgUrl} class="activity-card-image" alt= ""/>`)
+  // imagesCollection.forEach(imageTag => document.getElementById("photo-gallery").innerHTML += imageTag)
+  // document.getElementById("adventure-content").innerHTML = adventure.content;
+
+  document.getElementById("adventure-name").innerHTML = adventure.name;
+
+  //Setting the subtitle
+  document.getElementById("adventure-subtitle").innerHTML = adventure.subtitle;
+
+  //Loading the images
+  adventure.images.map((image) => {
+    let ele = document.createElement("div");
+    ele.className = "col-lg-12";
+    ele.innerHTML = `
+    <img
+        src=${image}
+        alt=""
+        srcset=""
+        class="activity-card-image pb-3 pb-md-0"
+      />
+          `;
+    document.getElementById("photo-gallery").appendChild(ele);
+  });
+
+  //Setting the content
+  document.getElementById("adventure-content").innerHTML = adventure.content;
+  
+  console.log("adventure.image", adventure);
 
 }
 
@@ -30,6 +72,52 @@ function addAdventureDetailsToDOM(adventure) {
 function addBootstrapPhotoGallery(images) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Add the bootstrap carousel to show the Adventure images
+  document.getElementById("photo-gallery").innerHTML = `
+  <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators" id="carousel-indicators">
+  
+    </div>
+  <div class="carousel-inner" id = "carousel-inner">
+  
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+`;
+
+ 
+images.forEach((image, imageIndex) => {
+
+  let carouselItemDiv = document.createElement("div");
+  let activeClass = imageIndex === 0 ? " active" : "";
+  carouselItemDiv.className = `carousel-item${activeClass}`;
+  carouselItemDiv.innerHTML = `
+                              <img 
+                              src = ${image}
+                              alt = "image"
+                              srcset =""
+                              class = "activity-card-image" class = "d-block w-100 data-bs-interval="3000" pb-3 pb-md-0" />`;
+  document.getElementById("carousel-inner").appendChild(carouselItemDiv); 
+
+  const indicator =`
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="${imageIndex}"
+                  ${imageIndex === 0 ? 'class="active"' : ""}
+                  aria-current="true"
+                  aria-label="Slide ${imageIndex+1}"></button>`;
+
+                // console.log("indicator", indicator);
+
+  document.getElementById("carousel-indicators").innerHTML += indicator;
+});
 
 }
 

@@ -152,9 +152,9 @@
             document.getElementById("data").textContent = "";
             filters.duration = event.target.value;
             let filteredAdventures = filterFunction(adventures, filters);
-            console.log(filteredAdventures);
+            // console.log(filteredAdventures);
             addAdventureToDOM(filteredAdventures);
-            console.log(filters);
+            // console.log(filters);
             generateFilterPillsAndUpdateDOM(filters);
 
             saveFiltersToLocalStorage(filters);

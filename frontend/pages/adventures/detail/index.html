@@ -42,7 +42,9 @@
                             <h1 id="adventure-name"></h1>
                             <p style="font-size: 20px; color: #999" id="adventure-subtitle"></p>
                         </div>
-                        <div class="row mb-3" id="photo-gallery"></div>
+                        <div class="row mb-3" id="photo-gallery">
+                            
+                        </div>
 
                         <hr />
                         <h5>About the Experience</h5>
@@ -99,8 +101,10 @@
             </div>
         </div>
     </div>
+  
+    <!-- Footer section -->
     <footer>
-        <div class="container">© QTrip 2020</div>
+        <div class="container">© QTrip 2023 <span style="font-size:23px">&#127758</span></div>
     </footer>
 
     <!-- Bootstrap script -->
@@ -121,9 +125,15 @@
         } from "../../../modules/adventure_details_page.js";
         (async function () {
             let adventureId = await getAdventureIdFromURL(window.location.search);
+            // console.log("adventureId",adventureId);
+  
             let adventureDetails = await fetchAdventureDetails(adventureId);
+            //   console.log("adventureDetails",adventureDetails);
+
             addAdventureDetailsToDOM(adventureDetails);
+
             addBootstrapPhotoGallery(adventureDetails.images);
+            
             conditionalRenderingOfReservationPanel(adventureDetails);
             captureFormSubmit(adventureDetails);
             showBannerIfAlreadyReserved(adventureDetails);
