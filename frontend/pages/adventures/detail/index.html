@@ -135,8 +135,11 @@
             addBootstrapPhotoGallery(adventureDetails.images);
             
             conditionalRenderingOfReservationPanel(adventureDetails);
+
             captureFormSubmit(adventureDetails);
+
             showBannerIfAlreadyReserved(adventureDetails);
+            
             function onPersonsChange(event) {
                 calculateReservationCostAndUpdateDOM(
                     adventureDetails,
