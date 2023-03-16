@@ -1278,8 +1278,8 @@
         "https://images.pexels.com/photos/2589010/pexels-photo-2589010.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
       ],
       "content": "A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place. A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
-      "available": true,
-      "reserved": false,
+      "available": false,
+      "reserved": true,
       "costPerHead": 3137
     },
     {
@@ -1718,55 +1718,6 @@
     }
   ],
   "reservations": [
-    {
-      "name": "Travis Head",
-      "date": "2023-04-02",
-      "person": "2",
-      "adventure": "7938812489",
-      "adventureName": "La Anrncast",
-      "price": 7424,
-      "id": "6b901f38dab05c2e",
-      "time": "Thu Mar 16 2023 12:41:21 GMT+0530 (India Standard Time)"
-    },
-    {
-      "name": "Shivam Singh",
-      "date": "2023-03-29",
-      "person": "5",
-      "adventure": "3727396712",
-      "adventureName": "Shiwood",
-      "price": 6760,
-      "id": "7efca6d433f84ab6",
-      "time": "Thu Mar 16 2023 12:48:12 GMT+0530 (India Standard Time)"
-    },
-    {
-      "name": "Virat Kohli",
-      "date": "2023-03-31",
-      "person": "2",
-      "adventure": "8549673097",
-      "adventureName": "Perthby",
-      "price": 8422,
-      "id": "48c14ac19187c168",
-      "time": "Thu Mar 16 2023 16:53:33 GMT+0530 (India Standard Time)"
-    },
-    {
-      "name": "Ms Dhoni",
-      "date": "2023-03-21",
-      "person": "3",
-      "adventure": "2629332143",
-      "adventureName": "North Gelgoon",
-      "price": 10152,
-      "id": "61e846951dd03f33",
-      "time": "Thu Mar 16 2023 17:25:48 GMT+0530 (India Standard Time)"
-    },
-    {
-      "name": "Putin",
-      "date": "2023-04-08",
-      "person": "6",
-      "adventure": "3936107807",
-      "adventureName": "Grand Rubou Du Wagten",
-      "price": 20100,
-      "id": "66374c2b2387d60f",
-      "time": "Thu Mar 16 2023 17:27:16 GMT+0530 (India Standard Time)"
-    }
+   
   ]
 }

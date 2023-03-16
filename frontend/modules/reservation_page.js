@@ -16,6 +16,8 @@ async function fetchReservations() {
   // return null;
 }
 
+
+
 //Function to add reservations to the table. Also; in case of no reservations, display the no-reservation-banner, else hide it.
 function addReservationToTable(reservations) {
   // TODO: MODULE_RESERVATIONS
