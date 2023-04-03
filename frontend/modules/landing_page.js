@@ -36,14 +36,14 @@ function addCityToDOM(id, city, description, image) {
   let dataDiv = document.createElement("div");
   dataDiv.className = "col-6 col-lg-3 mb-4";
   dataDiv.innerHTML = `
-  <a href = "pages/adventures/?city=${id}" id=${id}>
+  <a href = "pages/adventures/?city=${id}" id=${id}>  
   <div class = "tile">
-  <img src = ${image} alt = ${id}/>
+    <img src = ${image} alt = ${id}/>
     <div class = "tile-text text-white text-center">
     <h5> ${city} </h5>
     <p> ${description} </p>
     </div>
-   </div>
+  </div>
   </a>`;
   rowDiv.appendChild(dataDiv);  
   } 
